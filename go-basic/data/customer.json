@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Razi",
+    "hobbies": ["Badminton", "Games"],
+    "books": {
+      "1": "Atomic Habits",
+      "2": "The Intelligent Investor",
+      "3": "Supernova"
+    },
+    "address": [
+      {
+        "name": "Home",
+        "street": "Jl. Nusantara",
+        "country": "Indonesia",
+        "postalcode": "14444"
+      },
+      {
+        "name": "Office",
+        "street": "Jl. Megapolitan",
+        "country": "Indonesia",
+        "postalcode": "14440"
+      }
+    ]
+  },
+  {
+    "name": "Syahputro",
+    "hobbies": ["Football", "Boxing"],
+    "books": {
+      "1": "The Lord of The Ring",
+      "2": "Harry Potter",
+      "3": "The Great Gatsby"
+    },
+    "address": null
+  }
+]
