@@ -1,0 +1,30 @@
+package golanggenerics
+
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
+
+type Age int
+
+type Number interface {
+	~int | int8 | int16 | int32 | int64 |
+		float32 | float64
+}
+
+func Min[T Number](first, second T) T {
+	if first < second {
+		return first
+	}
+	return second
+}
+
+func TestMin(t *testing.T) {
+	assert.Equal(t, 100, Min(100, 200))
+	assert.Equal(t, int64(100), Min[int64](100, 200))
+	assert.Equal(t, 100.5, Min(200, 100.5))
+	assert.Equal(t, float64(100.5), Min(200, 100.5))
+	assert.Equal(t, Age(23), Min(Age(100), Age(23)))
+	assert.Equal(t, Age(23), Min[Age](100, 23))
+}
